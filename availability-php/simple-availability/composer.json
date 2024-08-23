@@ -1,0 +1,31 @@
+{
+  "name": "softwarearchetypes/availability",
+  "authors": [
+    {
+      "name": "Jakub Ciszak",
+      "email": "j.ciszak@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SoftwareArchetypes\\Availability\\SimpleAvailability\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": "^8.3",
+    "ramsey/uuid": "^4.7",
+    "munusphp/munus": "^0.16.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^11.2"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
