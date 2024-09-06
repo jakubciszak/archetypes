@@ -1,0 +1,38 @@
+{
+    "name": "software-archetypes/archetypes",
+    "type": "library",
+    "require": {
+        "munusphp/munus": "^0.16.0",
+        "ramsey/uuid": "^4.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoftwareArchetypes\\Availability\\SimpleAvailability\\": "availability/simple-availability/src"
+        },
+        "files": [
+            "availability/simple-availability/src/Common/Result/Result.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SoftwareArchetypes\\Availability\\SimpleAvailability\\Tests\\": "availability/simple-availability/tests"
+        },
+        "files": [
+            "availability/simple-availability/tests/Domain/AssetIdFixture.php",
+            "availability/simple-availability/tests/Domain/ClockFixture.php",
+            "availability/simple-availability/tests/Domain/AssetAvailabilityFixture.php",
+            "availability/simple-availability/tests/Common/DurationFixture.php",
+            "availability/simple-availability/tests/Domain/OwnerIdFixture.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jakub Ciszak",
+            "email": "j.ciszak@gmail.com"
+        }
+    ]
+}

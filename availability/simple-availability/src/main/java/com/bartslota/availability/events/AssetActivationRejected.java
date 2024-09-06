@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class AssetActivationRejected extends BaseDomainEvent {
 
     @JsonIgnore
-    static final String TYPE = "AssetActivationRejected";
+    static final String TYPE = " ";
 
     private final String assetId;
     private final String reason;
