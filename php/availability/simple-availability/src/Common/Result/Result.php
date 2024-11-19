@@ -2,52 +2,28 @@
 
 namespace SoftwareArchetypes\Availability\SimpleAvailability\Common\Result;
 
-use LogicException;
+use Munus\Control\Either;
 
 /**
- * @template F
- * @template S
- * @param S $value
- * @return Result<F, S>
+ * @template L
+ * @template R
+ * @template-extends Either<L, R>
+ * @param R $value
+ * @return Either<L, R>
  */
-function success($value): Result {
-    return new Success($value);
+function success($value): Either
+{
+    return Either::right($value);
 }
 
 /**
- * @template F
- * @template S
- * @param F $value
- * @return Result<F, S>
+ * @template L
+ * @template R
+ * @template-extends Either<L, R>
+ * @param L $value
+ * @return Either<L, R>
  */
-function failure($value): Result {
-    return new Failure($value);
-}
-
-/**
- * @template F
- * @template S
- */
-interface Result {
-    /**
-     * @return bool
-     */
-    public function success(): bool;
-
-    /**
-     * @return bool
-     */
-    public function failure(): bool;
-
-    /**
-     * @return S
-     * @throws LogicException
-     */
-    public function getSuccess(): Result;
-
-    /**
-     * @return F
-     * @throws LogicException
-     */
-    public function getFailure(): Result;
+function failure($value): Either
+{
+    return Either::left($value);
 }
