@@ -1,0 +1,12 @@
+<?php
+
+namespace SoftwareArchetypes\Availability\SimpleAvailability\Domain;
+
+enum Reason: string
+{
+    case ASSET_LOCKED_REASON = 'ASSET_CURRENTLY_LOCKED';
+    case NO_LOCK_ON_THE_ASSET_REASON = 'NO_LOCK_ON_THE_ASSET';
+    case NO_LOCK_DEFINED_FOR_OWNER_REASON = 'NO_LOCK_DEFINED_FOR_OWNER';
+    case ASSET_ALREADY_ACTIVATED_REASON = 'ASSET_ALREADY_ACTIVATED';
+    case ASSET_IS_MISSING_REASON = 'ASSET_IS_MISSING';
+}
